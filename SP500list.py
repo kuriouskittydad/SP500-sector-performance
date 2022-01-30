@@ -50,16 +50,7 @@ X = X.iloc[1:]
 
 TKR = X['Ticker']  
 
-import os
-from google.cloud.storage.blob import Blob
-from google.cloud import storage
-# os.environ['GOOGLE_APPLICATION_CREDENTIALS']=r"/home/abhaya_nsit/OPTIONS-DATABASE-AUTOMATA-24ac17354dd3.json"
 
-
-os.environ['GOOGLE_APPLICATION_CREDENTIALS']=r"C:/Users/abhay/Downloads/OPTIONS-DATABASE-AUTOMATA-24ac17354dd3.json"
-
-storage_client = storage.Client()
-bucket = storage_client.get_bucket("spy_tracker")
 
 TKR.to_json(r"C:/Users/abhay/Downloads/SPY500.json",index=True)
 # TKR.to_csv(r"/home/abhaya_nsit/SPY500.csv",index=True)
